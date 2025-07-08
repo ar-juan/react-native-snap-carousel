@@ -1153,12 +1153,16 @@ export class Carousel<TData> extends React.Component<
                   this._getKeyExtractor(item, index)
           } :
           {};
-
+      const uniqueKey = this._needsScrollView() 
+      ?(keyExtractor 
+        ? keyExtractor(item, index) 
+        : this._getKeyExtractor(item, index))
+        :undefined;
       return (
           <Component
             style={[mainDimension, slideStyle, animatedStyle]}
             pointerEvents='box-none'
-            {...specificProps}
+            key={uniqueKey}
           >
               {this.props.vertical ? this.props.renderItem({ item, index, dataIndex }, {
                   scrollPosition: this._scrollPos,
