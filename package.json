@@ -7,6 +7,13 @@
     "types": "lib/typescript/index.d.ts",
     "react-native": "src/index",
     "source": "src/index",
+    "files": [
+        "src",
+        "lib",
+        "!**/__tests__",
+        "!**/__fixtures__",
+        "!**/__mocks__"
+    ],
     "repository": {
         "type": "git",
         "url": "github.com/archriss/react-native-snap-carousel"
