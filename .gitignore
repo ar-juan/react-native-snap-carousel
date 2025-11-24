@@ -3,5 +3,4 @@ node_modules
 #LOCK
 package-lock.json
 yarn.lock
-
-lib
+pnpm-lock.yaml

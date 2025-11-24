@@ -19,7 +19,8 @@
         "url": "github.com/archriss/react-native-snap-carousel"
     },
     "scripts": {
-        "prepare": "bob build",
+        "build": "bob build",
+        "prepublishOnly": "npm run build",
         "lint": "eslint \"**/*.{js,ts,tsx}\""
     },
     "keywords": [
